@@ -7,18 +7,17 @@ public class GradeApp {
 	public static void main(String[] args) {
 		
 		String answer = "y";
-		int number = 0;
-		String letter = "";
 		
 		Scanner sc = new Scanner(System.in);		
 		
 		while(answer.equalsIgnoreCase("y")) {
 			
 			System.out.println("Enter numerical grade:");
-			number = Integer.parseInt(sc.nextLine());
+			int number = Integer.parseInt(sc.nextLine());
 			
 			//grade object
-			Grade grade = new Grade(number,letter);
+			Grade grade = new Grade();
+			grade.setNumber(number);
 			
 			String message = "Letter Grade: " + grade.letter();
 			System.out.println(message);
